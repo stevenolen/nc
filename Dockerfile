@@ -1,3 +1,3 @@
-FROM debian:stable-slim
+FROM alpine:latest
 
-RUN apt update && apt install -y netcat && rm -rf /var/lib/apt/lists/*
+RUN apk update && apk add bind-tools netcat-openbsd && rm -rf /var/cache/apk/*
