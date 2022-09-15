@@ -4,7 +4,7 @@ A docker image for netcat. Built on alpine (for the smallz) but also has proper 
 
 ## Usage
 
-    $ docker run --rm -t stevenolen/nc -vz example.com 80
+    $ docker run --rm -t stevenolen/nc -vz example.com 80   # also available from ghcr.io/stevenolen/nc
     Connection to example.com 80 port [tcp/http] succeeded!
 
 ## Extra Credit: A kubernetes reverse proxy.
