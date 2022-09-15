@@ -1,6 +1,9 @@
 name: image
 
 on:
+  schedule:
+    # make a new one once a month
+    - cron: "0 0 1 * *"
   push:
     branches:
       - 'main'
