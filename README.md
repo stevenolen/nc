@@ -17,16 +17,16 @@ A docker image for netcat. Built on alpine (for the smallz) but also has proper 
       name: example-com-proxy
       namespace: default
     spec:
-    restartPolicy: Never
-    terminationGracePeriodSeconds: 5
-    containers:
-      - name: proxy
-        image: stevenolen/nc
-        imagePullPolicy: Always
-        command: ['/bin/sh']
-        args:
-          - "-c"
-          - "mkfifo /tmp/fifo && nc -kl 8888 < /tmp/fifo | nc example.com 80 > /tmp/fifo"
+      restartPolicy: Never
+      terminationGracePeriodSeconds: 5
+      containers:
+        - name: proxy
+          image: stevenolen/nc
+          imagePullPolicy: Always
+          command: ['/bin/sh']
+          args:
+            - "-c"
+            - "mkfifo /tmp/fifo && nc -kl 8888 < /tmp/fifo | nc example.com 80 > /tmp/fifo"
 
 ### Make requests ✨
 
